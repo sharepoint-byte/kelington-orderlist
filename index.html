@@ -41,11 +41,6 @@
             background-color: #005a8b; /* Darker blue */
         }
 
-        .email-address {
-            font-weight: bold;
-            color: #0078d4;
-        }
-
         .small-text {
             font-size: 14px; /* Smaller font size */
             color: #777;
@@ -75,8 +70,6 @@
     <!-- Main Content -->
     <h1>New Document Received</h1>
 
-    <p>Hello, <span id="user-email" class="email-address">[email]</span></p>
-
     <p>You have received a new document (Order list) from one of your contacts.</p>
 
     <!-- Excel File Info Section -->
@@ -92,23 +85,6 @@
 
     <!-- Smaller Text Explanation -->
     <p class="small-text">This link will redirect you to view the document securely.</p>
-
-    <!-- JavaScript to dynamically show the user's email -->
-    <script>
-        // Function to get the 'email' query parameter from the URL
-        function getEmailFromURL() {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get('email'); // Get 'email' parameter
-        }
-
-        // Set the email in the span
-        const email = getEmailFromURL();
-        if (email) {
-            document.getElementById('user-email').textContent = email;
-        } else {
-            document.getElementById('user-email').textContent = "Recipient Email Not Provided";
-        }
-    </script>
 
 </body>
 </html>
