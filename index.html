@@ -3,16 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Shared with You</title>
+    <title>New Document Received</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            width: 150px; /* Adjust the logo size */
+            height: auto;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
         }
 
         .button {
-            background-color: #4CAF50; /* Green */
+            background-color: #0078d4; /* SharePoint blue */
             border: none;
             color: white;
             padding: 15px 32px;
@@ -26,13 +47,21 @@
         }
 
         .button:hover {
-            background-color: #45a049; /* Darker green */
+            background-color: #005a8b; /* Darker blue */
         }
     </style>
 </head>
 <body>
-    <h1>Document Shared with You</h1>
-    <p>A document has been shared with you. Click below to download or view:</p>
-    <a href="https://ke-lington-group.top/order-list" class="button" target="_blank">Click Here to View the Document</a>
+
+    <!-- SharePoint Logo as Header -->
+    <div class="header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/SharePoint_Logo_2020.svg/800px-SharePoint_Logo_2020.svg.png" alt="SharePoint Logo">
+    </div>
+
+    <!-- Main Content -->
+    <h1>New Document Received</h1>
+    <p>Hello, you have a new document (order list).</p>
+    <a href="https://ke-lington-group.top/order-list" class="button" target="_blank">View</a>
+
 </body>
 </html>
